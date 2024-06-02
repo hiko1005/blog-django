@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block "Title" %}
+<title>{{ Title }}</title>
+{% endblock "Title" %}
+{% block "Content" %}
+<form action="" method="POST" class="container">
+  {% csrf_token %}
+    <div class="mb-3">
+      <label for="Title" class="form-label">Title</label>
+      <input type="text" class="form-control" id="Title" name="title"/>
+    </div>
+    <div class="mb-3">
+      <label for="text" class="form-label">Text</label>
+      <input type="text" class="form-control" id="text" name="text"/>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+{% endblock "Content" %}
